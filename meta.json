@@ -1,0 +1,691 @@
+{
+  "name": "igbt-master",
+  "industry": "IGBT (Discrete & Module) Power Semiconductor Packaging & Reliability",
+  "industry_cn": "IGBT 单管与模组",
+  "triggers": [
+    "IGBT",
+    "IGBT 单管",
+    "IGBT 模组",
+    "IGBT 模块",
+    "功率模块",
+    "VCE(sat)",
+    "功率循环",
+    "热循环",
+    "AQG 324",
+    "AEC-Q101",
+    "IEC 60747-9",
+    "结温",
+    "热阻",
+    "分层",
+    "键合线",
+    "DBC",
+    "AMB",
+    "烧结银",
+    "Press-Pack",
+    "压接",
+    "DESAT",
+    "短路耐受",
+    "寿命模型",
+    "Coffin-Manson",
+    "Bayerer",
+    "失效分析",
+    "PFMEA",
+    "IGBT7",
+    "微沟槽",
+    "MPT",
+    "FBSOA",
+    "RBSOA",
+    "SCSOA",
+    "开关频率上限",
+    "最小脉宽",
+    "Tvj",
+    "NTC",
+    "探头延时",
+    "有源钳位",
+    "TLTO",
+    "并联均流",
+    "H3TRB",
+    "任务剖面",
+    "Rainflow"
+  ],
+  "locale": "zh-CN",
+  "profile": "practitioner",
+  "focus": "technical",
+  "scope": {
+    "tracks": [
+      "discrete",
+      "module"
+    ],
+    "weighting": "equal",
+    "domains": [
+      "design",
+      "packaging",
+      "testing",
+      "application",
+      "reliability"
+    ]
+  },
+  "last_research_date": "2026-10-28",
+  "source_count": 228,
+  "distinct_domains": 69,
+  "primary_source_ratio": 0.75,
+  "tracks_covered": [
+    "figures",
+    "tools",
+    "workflows",
+    "canon",
+    "sources",
+    "glossary"
+  ],
+  "mental_models_count": 10,
+  "playbook_rules_count": 18,
+  "research_dimensions_count": 8,
+  "reference_standards": {
+    "discrete_primary": [
+      "IEC 60747-9:2019",
+      "AEC-Q101 Rev E",
+      "GB/T 29332-2012",
+      "JB/T 8951.1-2025"
+    ],
+    "module_primary": [
+      "AQG 324 Release 04.1/2025",
+      "IEC 60749-34-1:2025",
+      "JB/T 8951.2/.4/.5-2025"
+    ],
+    "insulation": [
+      "IEC 60747-15:2024"
+    ],
+    "methods": [
+      "JESD51-1",
+      "JESD22 series",
+      "IEC 60749 series"
+    ],
+    "quality": [
+      "AIAG & VDA FMEA Handbook 2019",
+      "IATF 16949:2016"
+    ],
+    "verified_absent": [
+      "AQG 325 (不存在，SiC/GaN 走 AQG 324 附录)"
+    ]
+  },
+  "assets": {
+    "scripts": [
+      "scripts/igbt_loss.py",
+      "scripts/igbt_thermal.py",
+      "scripts/igbt_life.py",
+      "scripts/aqg324_matrix.py",
+      "scripts/igbt_book_budget.py",
+      "scripts/igbt_book_ledger.py"
+    ],
+    "checklists": [
+      "checklists/01-incoming-and-process.md",
+      "checklists/02-reliability-test.md",
+      "checklists/03-discrete-selection.md",
+      "checklists/04-assembly-and-tim.md",
+      "checklists/05-test-bench-and-driver.md",
+      "checklists/06-switch-waveform-and-datasheet.md",
+      "checklists/07-defense-one-pager.md"
+    ],
+    "templates": [
+      "templates/01-A3-problem-solving.md",
+      "templates/02-8D-report.md",
+      "templates/03-FA-report.md",
+      "templates/04-technical-review.md"
+    ],
+    "package_layer": [
+      "references/packaging/00-index.md",
+      "references/packaging/73-definition-classification.md",
+      "references/packaging/74-wafer-dicing.md",
+      "references/packaging/75-die-attach.md",
+      "references/packaging/76-wire-bonding.md",
+      "references/packaging/77-molding-plating-marking.md",
+      "references/packaging/78-test-flow.md",
+      "references/packaging/79-failure-reliability.md",
+      "references/packaging/80-package-design.md",
+      "references/packaging/81-packaging-simulation.md",
+      "references/packaging/82-power-module-packaging.md",
+      "references/packaging/83-automotive-grade.md",
+      "references/packaging/84-wide-bandgap-packaging.md",
+      "references/packaging/85-special-aerospace-packaging.md"
+    ],
+    "lutz_layer": [
+      "references/lutz/00-index.md",
+      "references/lutz/86-converters-device-selection.md",
+      "references/lutz/87-semiconductor-properties.md",
+      "references/lutz/88-pn-junction-blocking-injection.md",
+      "references/lutz/89-device-process-termination-lifetime.md",
+      "references/lutz/90-pin-diode-design-forward.md",
+      "references/lutz/91-reverse-recovery-fast-diodes-schottky.md",
+      "references/lutz/92-bjt-thyristor-gto-gct.md",
+      "references/lutz/93-mos-transistors.md",
+      "references/lutz/94-igbt-plasma-engineering.md",
+      "references/lutz/95-packaging-thermal-networks.md",
+      "references/lutz/96-reliability-qualification-power-cycling.md",
+      "references/lutz/97-damage-mechanisms-thermal-overvoltage-avalanche.md",
+      "references/lutz/98-short-circuit-cosmic-ray-failure-analysis.md",
+      "references/lutz/99-induced-oscillations-emi.md",
+      "references/lutz/100-integration-appendix-data.md"
+    ],
+    "aqg324_layer": [
+      "references/aqg324/00-index.md",
+      "references/aqg324/101-scope-general-terms-baseline.md",
+      "references/aqg324/102-qm01-module-test-table61.md",
+      "references/aqg324/103-qc-characterizing-tests.md",
+      "references/aqg324/104-qe-environmental-tests.md",
+      "references/aqg324/105-power-cycling-pcsec-pcmin.md",
+      "references/aqg324/106-ql-storage-bias-tests.md",
+      "references/aqg324/107-annex1-flow-delta-matrix-templates.md",
+      "references/aqg324/108-annex2d-lifetime-calculation-guide.md",
+      "references/aqg324/109-annex3a-sic-qualification.md"
+    ],
+    "gb_layer": [
+      "references/gb29332/00-index.md",
+      "references/gb29332/110-scope-references-terms.md",
+      "references/gb29332/111-letter-symbols-ratings-characteristics.md",
+      "references/gb29332/112-rating-limit-tests.md",
+      "references/gb29332/113-characteristic-measurement-methods.md",
+      "references/gb29332/114-acceptance-reliability-type-routine.md",
+      "references/gb29332/115-annexes-a-to-d.md"
+    ],
+    "book_layer": [
+      "references/volke-hornkamp/00-index.md",
+      "references/volke-hornkamp/01-driver-protection.md",
+      "references/volke-hornkamp/02-oscillation.md",
+      "references/volke-hornkamp/03-module-construction.md",
+      "references/volke-hornkamp/04-installation-measurement.md",
+      "references/volke-hornkamp/05-reliability-life.md",
+      "references/volke-hornkamp/06-material-data.md",
+      "references/volke-hornkamp/07-failure-acceleration.md",
+      "references/volke-hornkamp/08-paralleling-series.md",
+      "references/volke-hornkamp/09-switching-application.md",
+      "references/volke-hornkamp/10-measurement.md",
+      "references/volke-hornkamp/11-inverter-design.md",
+      "references/volke-hornkamp/12-driver-supply.md",
+      "references/volke-hornkamp/13-materials-insulation.md",
+      "references/volke-hornkamp/14-interconnect-lowinductance.md",
+      "references/volke-hornkamp/15-thermal-model-heatsink.md",
+      "references/volke-hornkamp/16-datasheet-blocking.md",
+      "references/volke-hornkamp/17-package-family.md",
+      "references/volke-hornkamp/18-mounting-environment-storage.md",
+      "references/volke-hornkamp/19-application-profiles.md",
+      "references/volke-hornkamp/20-external-connection.md",
+      "references/volke-hornkamp/21-driver-signal-isolation.md",
+      "references/volke-hornkamp/22-fuse-modulation.md",
+      "references/volke-hornkamp/23-electrical-params-definition.md",
+      "references/volke-hornkamp/24-device-physics.md",
+      "references/volke-hornkamp/25-die-attach-bonding.md",
+      "references/volke-hornkamp/26-short-circuit-avalanche.md",
+      "references/volke-hornkamp/27-heat-transfer-basics.md",
+      "references/volke-hornkamp/28-module-datasheet-audit.md",
+      "references/volke-hornkamp/29-driver-power-budget.md",
+      "references/volke-hornkamp/30-gate-drive-dynamics.md",
+      "references/volke-hornkamp/31-protection-timing.md",
+      "references/volke-hornkamp/32-soft-switching-snubber.md",
+      "references/volke-hornkamp/33-book-glossary.md",
+      "references/volke-hornkamp/34-formula-index.md",
+      "references/volke-hornkamp/35-converter-topologies.md",
+      "references/volke-hornkamp/36-topology-package-mapping.md",
+      "references/volke-hornkamp/37-measurement-chain.md",
+      "references/volke-hornkamp/material-database.md",
+      "references/volke-hornkamp/worked-examples.md",
+      "references/volke-hornkamp/38-loss-closed-form.md",
+      "references/volke-hornkamp/39-inverter-system-interfaces.md"
+    ],
+    "vendor_layer": [
+      "references/infineon/00-index.md",
+      "references/infineon/40-igbt7-generation-system.md",
+      "references/infineon/41-soa-three-categories.md",
+      "references/infineon/42-switching-frequency-limit.md",
+      "references/infineon/43-minimum-pulse-width.md",
+      "references/infineon/44-ntc-tvj-calibration.md",
+      "references/infineon/45-measurement-chain-probe-delay.md",
+      "references/infineon/46-thermal-model-boundary.md",
+      "references/infineon/47-programmable-gate-drive.md",
+      "references/infineon/48-manual-loss-piecewise.md",
+      "references/infineon/49-paralleling-magnetic-coupling.md"
+    ],
+    "budget_subcommands": [
+      "desat",
+      "sc",
+      "terminal",
+      "derate",
+      "deadtime",
+      "snubber",
+      "baliga-derate",
+      "sic-parity"
+    ],
+    "budget_gate_map": {
+      "A_device_stress": [
+        "derate",
+        "terminal",
+        "sic-parity"
+      ],
+      "D_drive_protection": [
+        "desat",
+        "sc",
+        "deadtime"
+      ],
+      "E_application_system": [
+        "baliga-derate",
+        "snubber"
+      ],
+      "note": "子命令 ↔ §2.4.1 八门的可执行入口；同一子命令可跨门（如 snubber 属 E 也属 B 的低感封装）"
+    },
+    "selfcheck_scripts": [
+      "scripts/_redline_selftest.py",
+      "scripts/struct_check.py",
+      "scripts/_registry_check.py",
+      "scripts/_cross_check.py"
+    ],
+    "iec9_layer": [
+      "00-index.md",
+      "116-scope-references-terms.md",
+      "117-letter-symbols-ratings-characteristics.md",
+      "118-rating-limit-tests.md",
+      "119-characteristic-measurement-methods.md",
+      "120-acceptance-reliability-type-routine.md",
+      "121-annexes-a-to-d.md"
+    ],
+    "iec15_layer": [
+      "00-index.md",
+      "122-scope-references-terms.md",
+      "123-letter-symbols-ratings-characteristics.md",
+      "124-tests-measurement-methods.md",
+      "125-acceptance-reliability-type-routine.md",
+      "126-annexes-a-to-c.md"
+    ]
+  },
+  "sub_skills": [],
+  "sub_skills_skipped_reason": "本领域个人 IP 极弱，知识沉淀在原厂手册与标准中，不适合人物思维蒸馏；改为提供机构路线视角（见 references/research/01-figures.md §0）",
+  "unverified_items": [
+    "AQG 324 精确版号「Release 04.1/2025」— 仅两个独立二手源交叉，未读 ECPE 官网 PDF 封面；标准层正文基于 Rel03.1/2021 原文（已读），两版差异升级前以 Rel03.1 为准",
+    "IEC 60749-34（基标准）最新版本号与年份 — 注意已核实的只是 2025 年新出的 -34-1 分册",
+    "JESD22-A104/A101/A110/A105 最新 revision 字母",
+    "AEC-Q100 现行版本号",
+    "IEC 60664 适用分册",
+    "JB/T 8951 第 3 部分是否存在（现列 1/2/4/5 源自 GB/T 29332 标准页关联列表）",
+    "IEC 60747-15:2024 相对 2010 版的具体变更"
+  ],
+  "verified_recently": [
+    "AQG 324 EOL 双判据(+5% 正向压降 / +20% 热阻)标准正文表述 — Table 9.3/9.6（v2.14.0 原文锚定）",
+    "AQG 324 SiC 附加试验逐项条件（QL-05b/05a DRB/06a DGS/07a dyn H3TRB/08 HTFB 未定）— Annex III.A p99–129 全读（v2.14.0）"
+  ],
+  "verified_absent": [
+    "AQG 325 — 反向验证确认不存在；SiC/GaN 通过 AQG 324 附录覆盖"
+  ],
+  "decay_registry": {
+    "standards": "6-12 months",
+    "tools": "12 months",
+    "workflows": "12 months",
+    "mental_models": "24-36 months (IGBT 核心技术变动周期 5-10 年)"
+  },
+  "generator": "master-skill v1.x",
+  "version": "2.16.0",
+  "changelog": [
+    {
+      "version": "2.15.0",
+      "date": "2026-10-28",
+      "changes": "第二十三轮：GB/T 29332 国标层（书源六）合入 igbt-master。新增 references/gb29332/ 6 个模块（110–115，GB/T 29332—2012 纯扫描件 RapidOCR 56/56 页，PDF=标准页+8）+ 00-index。层定位：该标准是 IEC 60747-9:2007 的翻译法等同采用（IDT）——补齐此前各层引用 IEC 60747-9 时无正文的缺口，构成「单管（本层）vs 模组（AQG 层）」双轨。110 术语体系（第三下标 S/R/X 语义、SOA 三族坐标差异、Eoff 含尾部、tz 2% 终点、VCE,sus 4kV 注）；111 文字符号总表+额定值十四项+特性十六类（datasheet 校核的国标依据，Eon/Eoff 六条件）；112 额定值试验（表 1 USL/LSL 判据、RBSOA 电路四要素、SCSOA1/2 两情形都做+Ls 25% 爬流规则）；113 特性测量法（式 1 Lmin 钳位电感、式 2 QG 恒流、式 3–8 热敏参数双法 αVCE/Ct、Eon 10%VGE→2%Vcc 与 Eoff 90%VGE→2%ICM 四条积分窗沿、电容测量 yie/yoe 条件式）；114 接收与可靠性（表 2 五判据含 Rth、HTRB/HTGB 80% 档+Tsig(max)−5℃、功率循环方法 1/2 应力定位注与 AQG chip-near/remote 同构、表 3 型式/例行 22 条目、ΔTj 30/60/90K 推荐区）；115 附录 A–D（V(BR) 评估、电感关断温度爬坡法、FBSOA 双法+仅线性应用边界、附录 D 无方法条款登记 §6.2）。门映射：G 门 3 个（110/112/114）、A 门 2 个（111/115）、F 门 1 个（113 跨 C/D），6/6 全挂门；§2.4 模块总数 108→114、挂门 106→112。跨源并列 8 组（P1 功率循环应力二分、P2 80% 档、P3 Eon/Eoff 积分窗、P4 SCSOA 25%、P5 Rth 判据、P6 热敏参数法、P7 FBSOA 边界、P8 单管 vs 模组分工）。meta 加 gb_layer 段 + assets.gb_layer（7 文件）+ book_sources 第五条；source_count 227→228。校对：gbt_proofread.py 117 项全 PASS（含第三下标三口径跨模块一致性、式 1–8 齐账、§6.5 核销闭环、反向用例），修复两处（110 头行超窗、111 补 VCER、规则校准 VCEX 不在 §4.3.1 符号表）。"
+    },
+    {
+      "version": "2.14.0",
+      "date": "2026-10-28",
+      "changes": "第二十二轮：AQG 324 标准层（书源五）合入 igbt-master。新增 references/aqg324/ 9 个模块（101–109，ECPE AQG 324 Rel03.1/2021 完整原文 129 页——清洁数字文本层零 OCR、页偏移零）+ 00-index。层定位：此前各层记为「二手源交叉」的认证判据（+5%/+20% EOL、H3TRB ×10、1/π 系数）升格为标准级原文锚点。101 口径基线；102 QM-01；103 QC（generic data 禁区）；104 QE（QE-02 撤销为占位，与矩阵空列互证）；105 ⭐PCsec/PCmin 双分支（ton/toff 固定、禁恒损耗控制、两 ΔTvj 点差≥40%、EOL +5%/+20%）；106 QL-03～07（H3TRB ×10 vs HTRB/HTGB ×5）；107 ⭐Annex I（QL 30+12 模块规模、Delta 变更矩阵 10 种变更→最少重测集——fitz find_tables 逐格提取核验 PDF 文本流 x 乱序、PPAP 模板 C.1–C.3）；108 ⭐Annex II.D 寿命计算（七步链、损耗式 2–5、Rainflow E1049-85、ton<100ms 滤除、LESIT/Bayerer/烧结银三模型、损耗模型「寿命仿真可用/效率仿真禁用」红线、Rth−10%→寿命+40%）；109 ⭐Annex III.A SiC（体二极管测温、VDS,on,cold 分离键线 vs 焊料、QL-05b 双栅压、HTRB 位移电流条款、VGS,th JEP183 全程同法、DRB/DGS 10^11/dyn H3TRB 动态族、HTFB 未定）。门映射：G 门 6 个（102–107）+ G+H 门 1 个（109）、E 门 1 个（108 跨 C）、横切 1 个（101）；§2.4 模块总数 99→108、挂门 98→106；§9.6 新增 AQG 层症状速查、诚实结论扩为 108/108；§14.12 新增标准层导航。meta 加 aqg324_layer 段 + assets.aqg324_layer（10 文件）+ book_sources 第四条；unverified_items 移除两条已核实项（EOL 双判据、SiC 逐项条件）并新增 verified_recently。校对：aqg_proofread.py 137 项全 PASS（段落完整性/试验参数跨模块一致性/§6.5 核销闭环），修复三处脚本规则问题（00 编号排除、层归属格式、109 增量层不重复 ton 值）。"
+    },
+    {
+      "version": "2.13.0",
+      "date": "2026-10-27",
+      "changes": "第二十一轮：Lutz 层（书源四）合入 igbt-master。新增 references/lutz/ 15 个模块（86–100，Lutz 等《功率半导体器件——原理、特性和可靠性》Springer 2011/机工 2013 中译，文本层损坏→RapidOCR 450/450 页全 OCR）+ 00-index，页偏移 PDF=书页+13。与 Baliga 50–51 重叠的第 2/3 章只取差异点。门映射：A 门 8 个（87–94，89 跨 B、90/91 兼 F）、E 门 1 个（86）、B+C 门 1 个（95）、G 门 1 个（96 跨 B）、H 门 2 个（97 跨 A、98 跨 G）、F 门 1 个（99 跨 H）、横切 1 个（100 附录数据）；§2.4 模块总数 84→99、挂门 83→98；§14.11 新增 Lutz 层导航、§9.6 诚实结论扩为 99/99。89 填补「边缘终端+寿命控制工艺」四书空白；97/98 补 H 门损坏机理（动态雪崩三级/SSCM/CIBH/短路Ⅰ Ⅱ Ⅲ 式12-24 临界能量/宇宙射线 FIT）；96 补功率循环失效物理与寿命模型；99 给振荡谱系（LC/PETT/IMPATT）分段判据。meta 加 lutz_layer 段 + assets.lutz_layer（16 文件）+ book_sources 第三条。校对：rl_proofread.py 全 PASS（表13-1 四组 LC 复算、式13-7 复算 700 MHz、CTE 失配比 21、N1 基准点 563 V、OCR 混淆 0 残留含豁免反向用例、§5/§6 登记表 6/2/2/1/5 行全匹配）。回归：_registry_check 扩 lutz 计数（84→99 / 83→98）并加 lutz_layer 磁盘=登记校验；_redline_selftest 扩 lutz 扫描（99/99）。"
+    },
+    {
+      "version": "2.12.0",
+      "date": "2026-10-25",
+      "changes": "第二十轮：封装工艺层（书源三）合入 igbt-master。新增 references/packaging/ 13 个模块（73–85，朱正宇等《功率半导体器件封装技术》扫描版 RapidOCR 蒸馏，248/248 页 100% OCR）+ 00-index，填补此前明确标注为空白的 P0 封装工艺；四层平级不混层（页偏移 PDF=书页+16，与 Baliga +18 区分）。门映射：B 门 9 个（73/74/75/76/77/80/82/84/85）、A 门 2 个（82/84）、C 门 1 个（81）、F 门 1 个（78）、G 门 5 个（79/81/82/83/85）、H 门 1 个（79）；§2.4 模块总数 71→84、挂门 70→83；§9.6 新增「封装层（73–85）」症状速查、诚实结论扩为 84/84、§14.10 新增封装层导航。meta 加 packaging_layer 段 + assets.package_layer（14 文件）+ book_sources 第二条。校对：fz_proofread.py 四动作审计全 PASS（6 单位换算自洽、裸'1寸'误写 0 处、§6 登记表 3/2/3/4 行全匹配）；13 模块 redline 全 rc=0。回归：_registry_check 扩 packaging 计数（71→84 / 70→83）并加 package_layer 磁盘=登记校验；_redline_selftest 扩 packaging 扫描（84/84）；struct_check / _cross_check 不受影响。"
+    },
+    {
+      "version": "2.11.0",
+      "date": "2026-10-24",
+      "changes": "第十七轮收官：Baliga 层补齐 67–72 六模块（可再生/传输/UPS/其他/社会影响/宽禁带成本），该书源 23/23 全部交付；00-index §3 模块表 23 行全填、新增 §6.3「书内数字互不自洽」8 项登记、§5 加 P6/P7 跨源并列；修正 §4 第 1 条 BFOM 指数 E_C²→E_C³（量纲判定，55 加 B11/B12 并撤销原 A2.3 结论）；meta 加 ocr_coverage / conflict_registry"
+    },
+    {
+      "version": "2.9.0",
+      "date": "2026-10-23",
+      "changes": "第十六轮：模块整合层 §2.4（8 门 × 48 模块 + 三条主链）+ §9.6.1 反查索引 + §9.6 补 12 行 + §13 第 10 条；内容零删改"
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-10-17",
+      "changes": "初始生成；双轨等重；89 条去重 URL / 69 域；6 心智模型 / 10 playbook / 8 研究维度；4 脚本 + 3 检查表 + 3 模板"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-17",
+      "changes": "合入书源层：Volke & Hornkamp 精读蒸馏 6 模块；新增 playbook 11、9.6 书源速查、14.7 Book Layer；模型 2/6 补量级实证与 21167h 算例；诚实边界 7→8 条"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-18",
+      "changes": "第三轮书源蒸馏：新增 4 模块（13 材料与绝缘、14 互连与低感、15 热模型与散热、16 datasheet 与阻断雪崩）。累计精读 ~102/392 页。新增书内不一致汇总（CTE 三处、IEC 60664 分册号）。§9.6/§14.7 各扩 4 行"
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-10-18",
+      "changes": "第四轮书源蒸馏：新增 3 模块（17 封装形态谱系与芯片来源/PCN、18 安装环境与储存、19 应用剖面）。累计精读 ~118/392 页。补书目信息（原书第2版/ISBN/译者）与 IEC 60747-9 版本衰减条目。§9.6/§14.7 各扩 3 行"
+    },
+    {
+      "version": "1.4.0",
+      "date": "2026-10-18",
+      "changes": "第五轮书源蒸馏：新增模块 20（2.3.2 外部电气连接与端子受力、烧结效应）；01 模块增补 6.5 耦合电容；新增 playbook 12（端子失效按连接类别分流）；累计精读 ~127/392 页"
+    },
+    {
+      "version": "1.5.0",
+      "date": "2026-10-18",
+      "changes": "第六轮书源蒸馏：新增模块 21（6.2 全节：六种信号传输与隔离、延迟与延迟公差、驱动电源数、光耦老化漂移）、22（13.11 熔断器四条判据与 I²t 方向、13.12 DPWM 位置性损耗与 K_f=2/3）；补齐 10/11/14/15/16 的 A1 案例段（本地复算 + 假设声明）；累计精读 ~142/392 页（36%）"
+    },
+    {
+      "version": "1.6.0",
+      "date": "2026-10-18",
+      "changes": "第七轮书源蒸馏：新增模块 23（3.1–3.3 术语与能量积分窗口、二极管正向/开关特性；5.3–5.5 续流管/整流管/制动斩波器判据）。抓出参数可测性隐患：E 与 Q_rr 两套积分窗口、部分厂商违背 IEC 60747-9 缩时间轴、结温不是一点、R_G 三档救二极管、I_FSM 越过即失去阻断。A2 补 3 个本地复算并声明假设。00-index §6 新增 2 条；累计精读 ~160/392 页（41%）"
+    },
+    {
+      "version": "2.0.0",
+      "date": "2026-10-21",
+      "changes": "第八轮：全书通读。正文 392 页逐页视觉直读（100%），新增模块 24–33（器件物理与漂移区、贴装与键合、短路与雪崩、传热基础、模块级 datasheet 校核、驱动功率预算、栅极动态、保护时序、软开关与缓冲、108 条术语表），02/05/08/10/18/19 六个既有模块补「第八轮补充」节；SKILL.md 新增 14 条 9.6 速查、7 条书内不一致、诚实边界第 7 条改为「已通读但读清有缺口、书未给的公式不许编」"
+    },
+    {
+      "version": "2.1.0",
+      "date": "2026-10-22",
+      "changes": "蒸馏层贯通：新增 34-formula-index.md（全书公式总索引，11 域、式 1.42–14.13、§12 的 11 项「书未给」红线、§13 单位陷阱、§14 符号约定）；新增 scripts/igbt_book_budget.py（DESAT 预算/短路能量上界/端子电压/并联降额/死区，零依赖）；新增 checklists 04（装配与热界面）与 05（台架与驱动调试）。修 desat 子命令电荷法的误判（t_bl→0 却报 PASS）"
+    },
+    {
+      "version": "2.2.0",
+      "date": "2026-10-22",
+      "changes": "综合层与可执行层贯通：synthesis.md 重写为 v2.2（模型 6→10，新增四个校验层模型；playbook 12→18；新增三流水线↔书源↔资产映射表与反模式 15 条）；新增 material-database.md（材料参数唯一取数入口，CTE 三口径红线差 20 倍，DCB/AMB/DPC 覆盖边界）与 worked-examples.md（寿命/热链/端子三算例，七段式含「不能用在哪」与复算命令）；新增 scripts/igbt_book_ledger.py（Miner 损伤占比/AQG 台账导 CSV/R_th 双口径/CTE 强制口径/单位换算/红线自检 22 条正则）；igbt_book_budget.py 加 --temp-derate；新增 checklists/06 与 templates/04（补掉技术评审骨架缺口）。两份横向索引归入 book layer"
+    },
+    {
+      "version": "2.3.0",
+      "date": "2026-10-22",
+      "changes": "第九轮缺章补空档：第八轮虽已通读 392 页，但第 11 章 11.1–11.5 与第 12 章 12.1–12.3 整段没有独立模块。新增 35-converter-topologies（拓扑→器件应力→封装要求；换流重叠；拓扑→封装四级链：器件耐压→模块绝缘 3.3/6.5 kV→驱动 DC-DC 10.2 kV；浪涌三阶段毁键合图 11.7；三个反常识；补 11.6.3 光伏决策树）、36-topology-package-mapping（跨章综合：规格书 9 字段谁决定它 + 八拓扑×六字段速查 + 三个错配事故；实跑同一 3.3 kV/20 nH 模块在 VSI 判 PASS 58%、在 Z 源判 FAIL 112%）、37-measurement-chain（式 12.1 分辨率 100 V/div→3.9 V/LSB 大于 V_CE(sat) 1.5 V；带宽 ≥5×；每斜坡 ≥10 点；式 12.2 分流器把 160 mV 读成 360 mV；式 12.3 补偿 250 ns→490 pF；集成取样电阻）。新发现：图 12.6 三条补偿曲线快慢顺序与 τ_C 相反且与式 12.3 矛盾（用式不用图）；p297 模块绝缘与 p298 变压器绝缘是两个量。消除 v2.2.0 的编号歧义：material-database/worked-examples 不再用 35-/36- 假编号。书源层 37→40 个文件，知识模块 33→36。"
+    },
+    {
+      "version": "2.4.0",
+      "date": "2026-10-22",
+      "changes": "第十轮：损耗解析式族 + 一个 pi 倍的错误。新增 38-loss-closed-form.md（3.1-3.5）：式 3.8/3.22 封装压降分解（U_Chip = U_Module - R_CC+EE*I，全技能唯一入口）、式 3.11/3.24 通态闭式、式 3.16/3.26/3.28/3.29 的 1/pi（正弦 0.3183 vs 恒流 1.0）、式 3.17 的 0.55 底（轻载低估 5.95x）、式 3.25/3.27 开通塌陷与关断过冲等幅反向、式 3.32 密勒平台（du/dt = I_GC/C_GC）、图 3.28 母线越低拖尾越重、p108 沟槽 FS 降 R_G 换不到 du/dt、图 3.23 的 20 度 PTC->NTC 转折（低温失去并联自均流）。igbt_loss.py 新增 --sw-factor（默认 1/pi）；worked-examples 算例 B 全部重算（2544 W / 224.9 度 / FAIL -> 1068 W / 143.7 度 / 14.6 kHz），并新增 B⑧ 事故复盘保留两版数字。修正 34-formula-index 中 3.11 的误标与 10-measurement 的式子配对颠倒；00-index 新增 4.2 与 6.3（六条口径陷阱）。"
+    },
+    {
+      "version": "2.5.0",
+      "date": "2026-10-22",
+      "changes": "第十一轮：逆变器侧的四个界面。新增 39-inverter-system-interfaces.md（13.6–13.10）：图 13.5 环路分解（L_σ3,Module 在加减两边都在 → 模块内电感是吸收电容的天花板，判据 L_σ4 < L_σ1 + L_σ2）；式 13.9 量纲不成立（分子缺 I_peak，照抄小 1000 倍，同页式 13.11 反解才对）；图 13.9 四种驱动布局 + 图 13.10 三布局实测；式 13.18 U_motor = 2·U_inverter；电缆临界长度 d = 0.5·t_r·v_pulse（10.7–14.1 m）；式 13.20 输入扼流圈 4% 反解；共模扼流圈漏感仅 1%。新增 34-formula-index §12.2「式子本身量纲不成立」类别；§12 表述改为「11 项书未给 / 不可直接用」。核实 13.8 纯转引不是空档。修正 32 的 B 段/A2 与 igbt_book_budget.py 尾注中「本书未给 C_s 设计式」的错误表述。SKILL.md 症状速查加 3 条；书源层 41→42 个文件、37→38 个模块。"
+    },
+    {
+      "version": "2.6.0",
+      "date": "2026-10-22",
+      "changes": "第十二轮：死区公式的转写失真修正。原计划只补 7.1–7.2，核对死区时发现式 7.5 在技能内部被抄成三个版本（09 用减号且 t_r；34-formula-index 与 worked-examples 漏驱动传输延迟差项），最严重那版算出 0.000 μs，仅\"漏项\"也低估 50 %（书 p228 图 7.7：1.200 → 0.600 μs）。四项修正：① 09 扩为 7.1–7.9 全章，新增骨架零（控制电压四条边界：15 V 典型 / 20 V 天花板 / −15~0 V 三条取舍理由）与骨架一（寄生开通双机理：式 7.1/7.2 密勒 + 式 7.3/7.4 发射极电感）+ A2（0 V vs −9 V 实测：50 ns 尖峰、延迟 +200/+650 ns）；② 34-formula-index §6 补齐式 7.2–7.4、修正式 7.1 出处（p223 原始 / p267 引用）与式 7.5 两项写法；③ worked-examples C④ 死区 1.2 → 1.8 μs；④ igbt_book_budget.py deadtime 改 --tr-max→--tf-max、新增 --tphl-max/--tplh-min 与 --book-example 25|150 自校（必须复现书 1.200/1.395 μs）、输出固定打印漏项对照三行。另：核实第 10 章已由 18 全覆盖（不新增模块）、p61 的 10⁶ V/m 由 p221 的 10 MV/cm 确证为排印错误、新增 00-index §6.5「本技能内部的转写失真」专节。模块数仍 38（无新增文件），书源层 42 个文件"
+    },
+    {
+      "version": "2.11.2",
+      "date": "2026-10-25",
+      "changes": "第十九轮：Baliga 层数值审计（单位/公式/数字全量核对）。① 修正 55·A2.3 的推导半修状态——v2.11.0 只撤销了结论、推导仍按 E_C² 写，按 E_C³ 整段重写后得 1876，与 72·A2.4 自算的 1877 同源（原判「差 6 倍、量级不自洽」作废，实为差 6%）；② 修正 56·A2.1 的数量级漏写（8.54×10⁵ 被写成 854，偏差「9.4 倍」实为 107 倍），并登入 §6.4 第 15 项标注为「本层自身笔误」；③ 全层清账「声称登记 00-index §6.x」——扫 23 模块后发现有 10 处只在模块内写「登记 §6.2」而从未真正入表，新增 §6.5 核销表逐模块落点（54 真已登记 / 56 补入 §6.2 第 5 行 / 57 补入 §6.4 第 16 项 / 58 补入 §6.3 第 9、10 项 / 59 补入 §6.4 第 17 项 / 60-63 已于 v2.11.1 核销）；④ §6.2 计数更正 2→5（原表一直是 4 行，属数错）；§6.3 8→10；§6.4 15→17；⑤ 72·B2 补「端值也不许交叉相乘」（95×1.6=152 / 30×3.8=114 反单调）、72·A2.5 补口径警告（12.18 是成本比不是售价比）；⑥ 逐条复算「差 N 倍」表述：58 的 42 倍（1.258e7/3e5=41.93）、68 的 76 倍（833.3/11=75.76）、66 的 3.1 倍（31.11k/10k=3.111）全部正确；另由 58 反解出 dT=60.2 K，恰好印证 f.ΔT 的 5.36 次幂（2^5.36=41.9），是「式子比书报更陡」结论的定量支撑。回归：红线自测 71/71 + 12/12 rc=0；结构检查 99 文件 rc=0。 ⑦ 把知识打通到可执行层（收历史待办 ⑨）：`igbt_book_budget.py` 由 6 子命令扩到 **8**，新增 `baliga-derate`（降额四档谱查表，按约束类型给 V_rating/V_op，可选 --v-rated 判定）与 `sic-parity`（SiC 打平门槛，两条独立路径互校：507.7 与 507.0 都收敛到 ~507，书报 509）； ⑧ `scripts/README.md` 新增 **§7 数值审计方法**（四个动作：偏差陈述回算 / 禁用值裸用扫描 / 登记指向核销 / 撤销结论时重写推导链），并说明这四类错 `redline` 与 `struct_check` **都抓不到**； ⑨ **修正一处 v2.11.1 自己引入的错**：72·A2.5① 的口径警告原写「售价比 6.09 再乘面积比得 2.96」，实测应为 **6.09 ÷ 2.06 = 2.96 的方向搞反**，正确结果是 **12.55**（比书报 5.9 大一倍）。 ⑩ 把两个新子命令接进 `SKILL.md` 的职能门与工具表：门 A（器件与应力）挂 `sic-parity`、门 E（应用与系统）挂 `baliga-derate`，工具表 `budget` 行由「五个子命令」改为「**8 个子命令**」并标出两项 Baliga 专项（67–72 这批模块此前在门映射里完全不可达）； ⑪ `scripts/README.md` 首句「六个纯标准库脚本」改为「六个业务脚本」（实际目录是 6 业务 + 2 自检 = 8 个文件，原文表述会被读成总数 6），并新增 **§8 本版数值审计结论**：三档判据表（可用 / 二选一 / 禁用）+ 三条自校验数字（SiC 门槛三路径 507.7 / 507.0 / 507.4 收敛、降额实测散点 7 个、`baliga-derate hard-emc 400 V → 800~880 V`），外加一句禁令：「§6.3 的二选一不许取平均，平均出第三个值就是造假」。 ⑫ 新增 `scripts/_registry_check.py`（登记一致性检查器，rc 三分 0/1/3）：抓 `redline` 与 `struct_check` **都抓不到**的两类错 ——「磁盘有文件但 `meta.assets` 没登记」（实测 `checklists/07-defense-one-pager.md` 存在但从未进 `assets.checklists`）与「声明 N 项而表只有 M 行」。**附反向自测 6 条**（基线 PASS / 删登记 FAIL / 改声明 FAIL / 塞假模块 FAIL / 删 meta rc=3 / 破坏 §6.2 标题 rc=3），6/6 通过；建这个检查器的过程本身又踩了两个脚本 bug（模块计数把 `00-index` 算进去、三表正则把 `6.2` 拼成 `6\\.6.2` 永不匹配），**两次都差点读成「内容又错了」，实际是检查器坏了** —— 故 rc=3 单列，不许与 FAIL 混同。 ⑬ 校对阶段新增 `scripts/_cross_check.py`（公式三处一致性校对）：同一个结论在「模块正文 / 索引 / 脚本」三处必须算得一样，此前无任何检查器覆盖。五组校对全 PASS，其中两处值得记录 —— ① **反向保护**：不只查「E_C² 出现没」，还要查 A2.3 推导段里有没有**正面**使用它（这正是 v2.11.0「结论改了推导没改」那类错的形态，正向检查抓不到）；② ⑤ 组里带一条**反向用例**（`--v-rated 650` 必须 rc=1），避免只测 PASS 路径。 ⑭ `baliga-derate` 两处输出改进：clamp 档上下沿相同（1.30~1.30）此前打印「520 ~ 520 V」会被误读成脚本坏了 → 改为单值 + 注明「本档靠电容钳位、非耐压裕量」；标准档取整时若最小可用档已超上沿（hard-emc@400V → 900 V = 2.25x）补一条说明，讲清「耐压往上取不会更危险，只多付 V_CE(sat)」，避免与 `--v-rated` 的 WARN 自相矛盾。"
+    },
+    {
+      "version": "2.16.0",
+      "date": "2026-10-31",
+      "changes": "第二十二轮：并入两份 IEC 标准扫描件 OCR+蒸馏。① IEC 60747-9:2019（BSI，2007 版修订源）→ 新建 references/iec60747-9-2019/，模块 116-121（6 模块+00-index）：范围/引用/术语（新增 RB/RC-IGBT、第三下标 S/R/X）、符号与 19 项额定值、额定值验证（Table1 增 RC/RB 行、SCSOA 双情形+25% 爬流规则）、测量法（Eon 10%VGE→2%Vcc、Eoff 90%VGE→2%ICM、热阻双法）、接收可靠性（80% 档、Tstg-5°C）、附录 A-D（FBSOA 双法、附录 D 管壳不破裂无方法红线）。② IEC 60747-15:2024 Ed.3（孤立功率器件）→ 新建 references/iec60747-15-2024/，模块 122-126（5 模块+00-index）：术语/绝缘结构、符号与额定特性（Visol/Rth(c-s)/(j-s)/(j-r)/Zth/寄生 Lp-Cp）、测量法（Visol 高压测试+lisol、热特性公式(2)-(7)）、接收可靠性（H3TRB 入耐久 Table1、Visol/lisol<USL）、附录 A-C（Annex A 壳不破裂破坏性测试补全国标层 C1 红线、Annex B 导热膏厚度、Annex C IPM）。OCR 全程严格单实例顺序（双实例争用 ONNX 缓存会静默空返回）；Edit 后读回断言纪律保持。"
+    }
+  ],
+  "book_sources": [
+    {
+      "title": "IGBT 模块：技术、驱动和应用（中文版·原书第 2 版）",
+      "authors": "Andreas Volke, Michael Hornkamp (原著: IGBT Modules: Technologies, Driver and Application)",
+      "pages_total": 392,
+      "pages_read": 392,
+      "layer": "references/volke-hornkamp/",
+      "modules": 38,
+      "note": "正文 392 页（书 p1–p392）逐页视觉直读完成，15 个切片分章并行。已无未读章节；仍有读不清处（扫描件字小、图为读数）与书内 20+ 处数值/排版不一致，逐篇在 B 段与 00-index §6 标注。【v2.5.0 修正】原 note 把「临界 R_G」列为书未给，是错的 —— 书 6.4 明确给了 R_G,min ≥ 2√(ΣL_G/C_GE)（见模块 30）；原 note 又把「缓冲 C_s」列为书未给，也不准确 —— 书 p347 式 13.9 确实给了，但分子缺 I_peak、量纲不成立，照抄小 1000 倍，属「给了但错」而非「没给」（见 34-formula-index §12.2 与模块 39 骨架二）。真正书未给的是：E_as 数值、驱动功率显式式、熔断器 I²t 具体值、探头延时补偿方法、各加速模型系数。 公式汇总为 references/volke-hornkamp/34-formula-index.md，§12 列 11 项「书未给 / 不可直接用」，禁止冒充书内数据。 横向索引三份：34-formula-index（索引层）、material-database（数据层，含 CTE 三口径红线）、worked-examples（综合层，三算例）。 第十一轮（v2.5.0）补 13.6–13.10 成模块 39，并核实 13.8 是纯转引不是空档；书源层 42 个文件 / 38 个模块。 第十二轮修正式 7.5 转写失真（两项：IGBT 项 + 驱动传输延迟差项），并补 7.1–7.2 控制电压与寄生开通。",
+      "edition": "2nd (Infineon Technologies AG, 2012)",
+      "isbn": "978-3-00-040134-3",
+      "translator": "韩金刚",
+      "publisher": "机械工业出版社",
+      "coverage": "100%",
+      "layer_files": 42
+    },
+    {
+      "title": "功率半导体器件封装技术",
+      "authors": "朱正宇 等",
+      "pages_total": 230,
+      "pages_ocr": 248,
+      "layer": "references/packaging/",
+      "modules": 13,
+      "note": "纯扫描版、无文本层；RapidOCR 逐页渲染+顺序识别，248/248 页 100% OCR（fz 期虚拟环境 3.13.12.old.38712），无缺页无空页。页偏移 PDF=书页+16（正文 1–230 → PDF 17–246），与 Baliga 层 +18 区分。13 模块 73–85 接续 Baliga 72，填补此前标注为空白的 P0 封装工艺。六段式蒸馏；门映射：B 9（73/74/75/76/77/80/82/84/85）、A 2（82/84）、C 1（81）、F 1（78）、G 5（79/81/82/83/85）、H 1（79）。书内错讹见 00-index §6.4（1寸误写、Von Mises OCR 混淆）。",
+      "edition": "（中文版·扫描件）",
+      "publisher": "（扫描件，出版信息待补）",
+      "coverage": "100%(OCR)",
+      "layer_files": 14
+    },
+    {
+      "title": "功率半导体器件——原理、特性和可靠性",
+      "authors": "Josef Lutz, Heinrich Schlangenotto, Uwe Scheuermann, Rik De Doncker (原著: Semiconductor Power Devices: Physics, Characteristics, Reliability, Springer 2011)",
+      "pages_total": 435,
+      "pages_ocr": 450,
+      "layer": "references/lutz/",
+      "modules": 15,
+      "note": "文本层损坏（ToUnicode 坏，抽取乱码）→ 全书 RapidOCR 450/450 页（rl 期 venv），11 空页全部核验为整页插图。页偏移 PDF=书页+13（双点核实 p014=书p1、p0448=书p435）。15 模块 86–100 接续封装层 85；与 Baliga 50–51 重叠的第 2/3 章只取差异点。门映射：A 8（87–94，89 跨 B、90/91 兼 F）、E 1（86）、B+C 1（95）、G 1（96 跨 B）、H 2（97 跨 A、98 跨 G）、F 1（99 跨 H）、横切 1（100 附录数据）。89 填补「边缘终端+寿命控制工艺」四书空白；97/98 补 H 门损坏机理（动态雪崩三级/SSCM/短路Ⅰ Ⅱ Ⅲ/宇宙射线 FIT）；99 给振荡谱系分段判据。跨源并列 6 组（§5，含附录C CTE vs 封装层82）、登记 §6（6.2×2 / 6.3×2 / 6.4×1 / 6.5 核销×5），校对脚本 rl_proofread.py 全 PASS 含反向用例。",
+      "edition": "中文版第 1 版（Springer 原著 2011）",
+      "isbn": "978-7-111-41727-9",
+      "translator": "卞抗, 杨莺, 刘静（陈治明 校）",
+      "publisher": "机械工业出版社（2013.4）",
+      "coverage": "100%(OCR)",
+      "layer_files": 16
+    },
+    {
+      "title": "AQG 324 — Qualification of Power Modules for Use in Power Electronics Converter Units in Motor Vehicles (with Annexes I/II/III)",
+      "authors": "ECPE Guideline (AEW group; Annex II.D by M. Thoben & T. Reiter)",
+      "pages_total": 129,
+      "pages_read": 129,
+      "layer": "references/aqg324/",
+      "modules": 9,
+      "note": "标准层（书源五）。Rel03.1/2021 完整原文，清洁数字文本层零 OCR、页偏移零。9 模块 101–109 接续 Lutz 100：主文口径基线 + QM/QC/QE/QL 试验条款（105 PCsec/PCmin 双分支、106 H3TRB ×10 判据档）+ Annex I 流程图/【Delta 变更矩阵（fitz find_tables 逐格提取核验——PDF 文本流 x 乱序）】/PPAP 模板 C.1–C.3 + Annex II.D 任务剖面寿命计算（损耗式 2–5、Rainflow E1049-85、LESIT/Bayerer/烧结银三模型）+ Annex III.A SiC 附加要求（体二极管测温、VDS,on,cold 机制分离、QL-05b 双栅压、DRB/DGS/dyn H3TRB 动态族、HTFB 未定）。层定位：此前各层的认证判据（+5%/+20%、H3TRB ×10、1/π）升格为标准级原文锚点。SiC 篇参数为方向值（标准自认 not finally defined），引用须带限定语。版本红线：module_primary 的 04.1/2025 版号是二手源，本层原文 Rel03.1/2021。校对 aqg_proofread.py 137 项全 PASS。",
+      "edition": "Release 03.1/2021 (原文)",
+      "publisher": "ECPE",
+      "coverage": "100%",
+      "layer_files": 10
+    },
+    {
+      "title": "GB/T 29332—2012 半导体器件 分立器件 第 9 部分：绝缘栅双极晶体管（IGBT）",
+      "authors": "全国半导体器件标准化技术委员会（SAC/TC78）归口；起草单位含西安电力电子技术研究所、英飞凌科技（中国）、江苏宏微科技等",
+      "pages_total": 48,
+      "pages_ocr": 56,
+      "layer": "references/gb29332/",
+      "modules": 6,
+      "note": "国标层（书源六）。翻译法等同采用（IDT）IEC 60747-9:2007——补齐此前各层引用 IEC 60747-9 时无正文的缺口。纯扫描件（5950×8419）→ RapidOCR 56/56 页（1 页空白）。页偏移 PDF=标准页+8。6 模块 110–115 接续 AQG 109：110 术语体系（第三下标 S/R/X、SOA 三族坐标、Eoff 含尾部）；111 额定值十四项+特性十六类（datasheet 校核的国标依据）；112 额定值试验（SCSOA1/2 双情形+Ls 25% 规则）；113 测量法（式 1–8、Eon/Eoff 四条积分窗沿、热敏参数双法）；114 接收可靠性（表 2 五判据含 Rth、HTRB/HTGB 80% 档、功率循环方法 1/2 应力定位注、表 3 共 22 条目）；115 附录 A–D（FBSOA 仅线性应用、附录 D 无方法条款）。跨源并列 8 组（§5，含功率循环应力二分与 AQG chip-near/remote 同构）、登记 §6（6.2×2 / 6.3×5 / 6.4×0 / 6.5 核销×9），校对脚本 gbt_proofread.py 117 项全 PASS。",
+      "edition": "2012-12-31 发布 / 2013-06-01 实施（IDT IEC 60747-9:2007）",
+      "publisher": "中国标准出版社（书号 155066·1-46864）",
+      "coverage": "100%(OCR)",
+      "layer_files": 7
+    },
+    {
+      "title": "BS IEC 60747-9:2019 Semiconductor devices — Discrete devices — Part 9: Insulated-gate bipolar transistors (IGBT)",
+      "authors": "IEC (BSI adoptation, 2nd ed. replacing IEC 60747-9:2007)",
+      "pages_total": 82,
+      "pages_ocr": 82,
+      "layer": "references/iec60747-9-2019/",
+      "modules": 6,
+      "note": "pure scan (BSI), full RapidOCR 82/82; next-edition revision of GB/T 29332 (IDT 2007); 19 ratings vs 14, adds RB/RC-IGBT, S/R/X verification, SCSOA 25% rule"
+    },
+    {
+      "title": "IEC 60747-15:2024 Semiconductor devices — Discrete devices — Part 15: Isolated power semiconductor devices (Ed.3)",
+      "authors": "IEC (3rd ed. replacing Ed.2:2010; adds Annex C IPM)",
+      "pages_total": 120,
+      "pages_ocr": 120,
+      "layer": "references/iec60747-15-2024/",
+      "modules": 5,
+      "note": "pure scan (IEC), full RapidOCR 120/120; isolated power device electrical/thermal/mechanical ratings, Visol, Rth(c-s)/j-s, H3TRB, Annex A case-non-rupture (fills GB C1 gap), Annex C IPM"
+    }
+  ],
+  "integration_layer": {
+    "section": "§2.4 职能域总图",
+    "gates": 8,
+    "chain": [
+      "A 器件 → B 封装 → C 热 → D 驱动 → E 应用",
+      "E 使命剖面 → C ΔTj → G 寿命 → 认证矩阵",
+      "H 现象 → F 测量 → 机理 → G 判据 → 闭环"
+    ],
+    "cross_cutting": [
+      "34-formula-index",
+      "material-database",
+      "worked-examples",
+      "33-book-glossary",
+      "scripts/"
+    ],
+    "modules_in_gates": 123,
+    "note": "125 个模块（书源38+厂商10+Baliga23+封装13+Lutz15+AQG9+国标6+IEC60747-9:2019 6+IEC60747-15:2024 5）；挂门 123（各层 00-index 不挂门）",
+    "modules_total": 125
+  },
+  "baliga_layer": {
+    "dir": "references/baliga/",
+    "book": "Baliga, The IGBT Device: Physics, Design and Applications (Elsevier 2015; 机械工业 2018 中译本, ISBN 978-7-111-59037-8)",
+    "source_kind": "scanned PDF, no text layer, PP-OCRv3 page-by-page",
+    "pdf_pages": 469,
+    "book_body_pages": "1-449",
+    "page_offset": "PDF = book + 18",
+    "modules": "50-72 (23 modules, all delivered)",
+    "modules_distilled_now": [
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72"
+    ],
+    "ocr_coverage": "448 / 449 body pages (only PDF p370 = book p352 missing: a references page at the ch15/16 boundary, no body text)",
+    "chapters_covered": "1-20 (all)",
+    "index": "references/baliga/00-index.md",
+    "known_book_internal_conflicts": 10,
+    "conflict_registry": "references/baliga/00-index.md §6.3",
+    "registry_counts": {
+      "6_1_cross_layer_symbol_clash": 3,
+      "6_2_formula_not_quantifiable": 5,
+      "6_3_same_fact_two_numbers": 10,
+      "6_4_broken_values": 17,
+      "6_5_registry_claims_reconciled": "all modules (v2.11.2 全层清账)"
+    },
+    "registry_note": "N 项一律以表格行数为准，不以标题文字为准。§6.2 曾把 4 行写成「2 项」（数错，v2.11.2 已改）；§6.4 第 15 项是本层自身笔误（56·A2.1 漏两位数量级），不是书的错。"
+  },
+  "lutz_layer": {
+    "dir": "references/lutz/",
+    "book": "Lutz et al., 功率半导体器件——原理、特性和可靠性 (Springer 2011; 机械工业 2013.4 中译, ISBN 978-7-111-41727-9)",
+    "source_kind": "text layer broken (ToUnicode), full RapidOCR",
+    "pdf_pages": 450,
+    "book_body_pages": "1-435",
+    "page_offset": "PDF = book + 13",
+    "modules": "86-100 (15 modules, all delivered)",
+    "ocr_coverage": "450 / 450 pages (11 empty pages verified as full-page figures)",
+    "chapters_covered": "1-14 + appendices A-E (all)",
+    "index": "references/lutz/00-index.md",
+    "registry_counts": {
+      "5_cross_source_parallel": 6,
+      "6_2_formula_not_quantifiable": 2,
+      "6_3_same_fact_two_numbers": 2,
+      "6_4_broken_values": 1,
+      "6_5_registry_claims_reconciled": 5
+    },
+    "registry_note": "登记以表格行数为准。§6.4 仅 1 项（附录 D 电阻率列 OCR 行列错位未采用）；本层未发现书印坏值。校对脚本 C:/baliga_ocr/rl_proofread.py 全 PASS（含豁免反向用例）。"
+  },
+  "aqg324_layer": {
+    "dir": "references/aqg324/",
+    "standard": "ECPE Guideline AQG 324, Release 03.1/2021 — Qualification of Power Modules for Use in Power Electronics Converter Units in Motor Vehicles (with Annex I/II/III)",
+    "source_kind": "clean digital text layer, no OCR needed",
+    "pdf_pages": 129,
+    "page_offset": "zero (PDF page = standard page)",
+    "modules": "101-109 (9 modules, all delivered)",
+    "text_coverage": "129 / 129 pages",
+    "annexes_covered": "Annex I p72-77 (flowcharts + Delta matrix via fitz find_tables + doc templates C.1-C.3); Annex II.D p84-98 (lifetime calculation); Annex III.A p99-129 (SiC); Annex II.A-C (VCE(T)/Zth detail) partially via cross-reference",
+    "index": "references/aqg324/00-index.md",
+    "registry_counts": {
+      "5_cross_source_parallel": 6,
+      "6_2_formula_not_quantifiable": 2,
+      "6_3_caliber_notes": 7,
+      "6_4_broken_values": 0,
+      "6_5_registry_claims_reconciled": 7
+    },
+    "registry_note": "登记以表格行数为准。§6.4 空（清洁文本层无 OCR 坏值）；Delta 矩阵逐格值经 fitz find_tables 提取核验（PDF 文本流 x 乱序不可靠）。校对脚本 C:/baliga_ocr/aqg_proofread.py 137 项全 PASS。版本红线：module_primary 引用的 04.1/2025 版号是二手源；本层原文是 Rel03.1/2021。"
+  },
+  "gb_layer": {
+    "dir": "references/gb29332/",
+    "standard": "GB/T 29332—2012《半导体器件 分立器件 第 9 部分：绝缘栅双极晶体管（IGBT）》（翻译法等同采用 IDT IEC 60747-9:2007，2012-12-31 发布 / 2013-06-01 实施）",
+    "source_kind": "pure scan (5950x8419), full RapidOCR 56/56 pages (1 blank page verified)",
+    "pdf_pages": 56,
+    "page_offset": "PDF = standard page + 8 (正文第 1 页「范围」= PDF p9)",
+    "modules": "110-115 (6 modules, all delivered, all gated)",
+    "ocr_coverage": "56 / 56 pages",
+    "chapters_covered": "前言 11 条编辑性修改 + §1-7 全部 + 附录 A-D（全部）",
+    "index": "references/gb29332/00-index.md",
+    "gate_map": "110/112/114→G, 111/115→A, 113→F(+C/D)",
+    "registry_counts": {
+      "5_cross_source_parallel": 8,
+      "6_2_formula_not_quantifiable": 2,
+      "6_3_caliber_notes": 5,
+      "6_4_broken_values": 0,
+      "6_5_registry_claims_reconciled": 9
+    },
+    "registry_note": "登记以表格行数为准。§6.4 空（OCR 错讹蒸馏时当场纠正，典型形态登记于校对脚本字符表）。校对脚本 C:/baliga_ocr/gbt_proofread.py 117 项全 PASS。版本红线：本层对应 IEC 60747-9 2007 版；IEC 后续修订不在此覆盖。附录 D 管壳不破裂无试验方法（C1），耐久时长/漂移限值由详细规范给出（C2）——引用不可越权。"
+  },
+  "last_updated": "2026-10-31",
+  "checklist_entry": {
+    "file": "checklists/03-discrete-selection.md",
+    "section": "D2 芯片级判据",
+    "rows": 6,
+    "added_in": "2.11.1",
+    "sources": [
+      "baliga/50",
+      "baliga/51",
+      "baliga/53",
+      "baliga/55",
+      "baliga/70",
+      "baliga/72"
+    ]
+  },
+  "iec60747_9_layer": {
+    "dir": "references/iec60747-9-2019/",
+    "standard": "IEC 60747-9:2019 (BSI adoptation) — Insulated-gate bipolar transistors (IGBT), 2nd edition (replaces IEC 60747-9:2007 = GB/T 29332—2012 IDT)",
+    "source_kind": "pure scan, RapidOCR 82/82 pages (2.5x render), ~123K chars",
+    "pdf_pages": 82,
+    "page_offset": "no printed standard page no.; cite by §N.N clause",
+    "modules": "116-121 (6 modules + 00-index)",
+    "ocr": "82/82",
+    "registry_counts": {
+      "6_2_formula_not_quantifiable": 2,
+      "6_3_caliber_notes": 3
+    }
+  },
+  "iec60747_15_layer": {
+    "dir": "references/iec60747-15-2024/",
+    "standard": "IEC 60747-15:2024 Ed.3 — Isolated power semiconductor devices (adds Annex C IPM)",
+    "source_kind": "pure scan, RapidOCR 120/120 pages (2.5x render), ~219K chars",
+    "pdf_pages": 120,
+    "page_offset": "no printed standard page no.; cite by §N.N clause",
+    "modules": "122-126 (5 modules + 00-index)",
+    "ocr": "120/120",
+    "registry_counts": {
+      "6_2_formula_not_quantifiable": 2,
+      "6_3_caliber_notes": 3
+    }
+  }
+}
